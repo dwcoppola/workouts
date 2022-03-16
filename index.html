@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <script src="script.js" defer></script>
+        <style>
+            label
+            {
+                font-weight: bold;
+            }
+            .form
+            {
+                width: 300px;
+                display: flex;
+                flex-direction: column;
+                margin-right: auto;
+                margin-left: auto;
+            }
+            input
+            {
+                height: 2em;
+            }
+            select, button
+            {
+                height: 2.5em;
+            }
+            h2
+            {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Welcome</h2>
+        <div class="form">
+            <label>Date</label>
+            <input id="date" type="date"/><br>
+            <label>Activity</label>
+            <select id="activity" type="text">
+                <option selected disabled>Choose:</option>
+                <option>Curls</option>
+                <option>Jogging</option>
+                <option>Walking</option>
+                <option>Treadmill</option>
+                <option>Preacher Curls</option>
+                <option>Hammer Curls</option>
+                <option>Front Lifts</option>
+                <option>Side Lifts</option>
+                <option>Dips</option>
+                <option>Push Ups</option>
+                <option>Crunches</option>
+                <option>Squats</option>
+                <option>Bench</option>
+                <option>Incline Bench</option>
+                <option>Shrugs</option>                
+                <option>Side Bend</option>
+            </select><br>
+            <label>Set Notes</label>
+            <input id="sets" type="text"><br>
+            <button onclick="getData()">SAVE</button>
+        </div>
+        <h2>History</h2>
+        <div class="form">
+            <label>Search Date</label>
+            <input id="search-date" type="date"/><br>
+            <button onclick="getWorkoutsByDate()">SEARCH</button>
+        </div>
+    </body>
+</html>
